@@ -1,0 +1,18 @@
+{% extends 'drinks/base.html' %}
+
+    {% block content %}<!-- Inheritance-->
+        <h1> Drinks App Home </h1>
+        {% for drink in drinks %}
+           
+            <div class="card my-4" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ drink.title }}</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{ drink.company }}</h6>
+                  <p class="card-text"> {{ drink.description }}</p>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">{{ drink.updated_at |date:"F d,Y" }}</h6>
+                  <a href="{% url 'drinks-detail' drink.pk %}" class="card-link">view drink</a>
+                </div>
+              </div>
+        {% endfor %}
+{% endblock content %}
+    

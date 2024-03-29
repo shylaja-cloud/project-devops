@@ -1,0 +1,16 @@
+{% extends 'drinks/base.html' %} 
+{% block content %}
+
+<div class="container">
+    <h2> You have been logged out</h2>
+    <div class="border-top pt-3">
+        <form action="{% url 'user-login' %}" method= "POST">
+            {% csrf_token %}
+            <button type="submit">Log back in here!</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+

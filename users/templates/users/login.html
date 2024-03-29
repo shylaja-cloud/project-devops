@@ -1,0 +1,19 @@
+{% extends 'drinks/base.html' %} {% load crispy_forms_tags %}
+{% block content %}<!-- Inheritance -->
+<!--<h1>About Drinks App</h1>-->
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class ="border-bottom mb-4">log in</legend>
+            {{ form.as_p }}
+        </fieldset>
+        <div class="form-group py-3">
+            <input class="btn btn-outline-primary" type="submit" value="log in"/>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <a href="#">Don't have an account? Register here!</a>
+    </div>
+</div>
+{% endblock content %}

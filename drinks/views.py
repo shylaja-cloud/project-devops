@@ -5,6 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import drink
 from django.urls import reverse_lazy
 from . import models
+from django.views.decorators.csrf import csrf_protect
 
 
 # Create your views here.

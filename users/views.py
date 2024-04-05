@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
 
+
 from .import forms
 from django.contrib.auth import authenticate, login, logout
 # Create your views here.
@@ -20,9 +21,14 @@ def register(request):
         form = forms.UserRegisterForm()
     return render(request, 'users/register.html', {'form':form})
 
+
+    
+
+
 @login_required()#decorator
 def profile(request):
     return render(request, 'users/profile.html')
+
 
 
 @permission_required('auth.add_user') # Example permission, replace with your desired permission code

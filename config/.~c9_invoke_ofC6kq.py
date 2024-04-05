@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['a993f0cf0dfa4c10a18cdd3681215dc4.vfs.cloud9.eu-west-1.amazonaw
 # Application definition
 
 INSTALLED_APPS = [
-    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,4 +136,4 @@ LOGIN_REDIRECT_URL = 'drinks-home'
 LOGIN_URL = 'user-login'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://a993f0cf0dfa4c10a18cdd3681215dc4.vfs.cloud9.eu-west-1.amazonaws.com']
+CSRF_TRUSTED_ORIGINS = [' https://a993f0cf0dfa4c10a18cdd3681215dc4.vfs.cloud9.eu-west-1.amazonaws.com']
